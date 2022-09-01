@@ -1,0 +1,67 @@
+@import '../../../variables'
+@import '../../../mixin'
+
+.containerOptionSelectList
+    @include flexContainer(row, flex-start, center, nowrap)
+    padding: 15px 50px
+    position: relative
+    cursor: pointer
+    user-select: none
+
+.containerOptionSelectList .containerOptionSelectList_input
+    position: absolute
+    opacity: 0
+    cursor: pointer
+    height: 0
+    width: 0
+    
+.containerOptionSelectList .checkmark
+    position: absolute
+    top: 15px
+    left: 15px
+    height: 20px
+    width: 20px
+    border-radius: 5px
+    border: 0.30px solid $line-color
+    background-color: #eee
+
+.containerOptionSelectList:hover .containerOptionSelectList_input ~ .checkmark 
+    background-color: #ccc
+
+.containerOptionSelectList:hover
+    padding: 14px 49px
+    background-color: $btn-background
+    color: $color-btn-text
+
+.containerOptionSelectList .containerOptionSelectList_input:checked ~ .checkmark 
+    background-color: $btn-background
+
+
+.containerOptionSelectList .checkmark:after
+    content: ""
+    position: absolute
+    display: none
+
+.containerOptionSelectList .containerOptionSelectList_input:checked ~ .checkmark:after
+  display: block
+
+.containerOptionSelectList .checkmark:after 
+  left: 5.8px
+  top: 1.9px
+  width: 5px
+  height: 10px
+  border: solid $color-btn-text
+  border-width: 0 2px 2px 0
+  transform: rotate(45deg)
+
+.containerOptionSelectList:hover .containerOptionSelectList_input:checked ~ .checkmark 
+    background-color: $color-btn-text
+
+.containerOptionSelectList:hover .checkmark:after 
+    left: 5.8px
+    top: 1.9px
+    width: 5px
+    height: 10px
+    border: solid $btn-background
+    border-width: 0 2px 2px 0
+    transform: rotate(45deg)

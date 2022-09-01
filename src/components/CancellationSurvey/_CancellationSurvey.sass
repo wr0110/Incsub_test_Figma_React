@@ -1,0 +1,38 @@
+@import '../../variables'
+@import '../../mixin'
+
+.containerCancellationSurvey 
+    width: 100vw
+    padding: 5% 0
+    background: $background-grey
+    @include flexContainer(row, center, center, wrap)
+
+    .wrapper
+        width: 90%
+
+    .cancelLink
+        text-decoration: none
+        cursor: pointer
+        @include flexContainer(row, flex-start, center, wrap)
+
+        .cancelLink_arrowContainer
+            width: 25px
+            height: 25px
+            background: $color-btn-text
+            border: 1px solid $border-color
+            border-radius: 4px
+            @include flexContainer(row, center, center, nowrap)
+
+            .arrow
+                border: solid black
+                border-width: 0 2px 2px 0
+                display: inline-block
+                padding: 2px
+                transform: rotate(135deg)
+
+        .cancelLink_text
+            align-self: center
+            margin-left: 30px
+            @include textStyle($main-font, 700, 18px, 30px, 0.26px)
+            color: $main-font-color-dark
+

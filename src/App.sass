@@ -1,0 +1,23 @@
+@import 'common'
+@import 'variables'
+@import 'mixin'
+
+.containerApp 
+  width: 100vw
+  height: 100vh
+  text-align: center
+
+.wrapperApp
+  position: relative
+  height: 100%
+  margin: 0 auto
+  @include flexContainer(row, center, center, wrap)
+
+.reportTitle
+  font-size: 24px
+  font-weight: 700
+  cursor: pointer
+
+@import 'components/Home/_Home'
+@import 'components/CancellationSurvey/_CancellationSurvey'
+

@@ -1,0 +1,67 @@
+@import '../../../variables'
+@import '../../../mixin'
+
+
+.containerSelectList
+    width: 100%
+    position: relative
+
+    &::after 
+        content: ''
+        position: absolute
+        top: 14px
+        right: 20px
+        z-index: 1000
+        border: solid $color-sub-text
+        border-width: 0 2px 2px 0
+        display: inline-block
+        padding: 4px
+        transform: rotate(45deg)
+
+    .containerSelectList_input
+        
+        z-index: 999
+        margin: 0 auto
+        padding: 9px 14px
+        width: 99%
+        border: 1px solid $line-color
+        border-radius: 5px
+        // appearance: none
+
+        // Additional resets for further consistency
+        background-color: transparent
+        width: 100%
+        font-family: inherit
+        font-size: inherit
+        cursor: inherit
+        line-height: inherit
+        outline: none
+        cursor: pointer
+
+    .containerSelectList_inputActive
+        border: 1px solid $btn-color-blue
+        border-bottom-left-radius: unset
+        border-bottom-right-radius: unset
+    
+    .optionSelected
+        position: absolute
+        left: 16px
+        top: -11px
+        z-index: 1000
+        padding: 2px
+        background-color: $color-btn-text
+        color: $btn-color-blue
+        @include textStyle($main-font, 400, 12px, 18px, none)
+        transition: top .09s
+
+    .containerSelectList_options
+        position: absolute
+        z-index: 1000
+        background-color: $color-btn-text
+        width: 100%
+        border-bottom: 1px solid $btn-color-blue
+        border-left: 1px solid $btn-color-blue
+        border-right: 1px solid $btn-color-blue
+        border-bottom-left-radius: 5px
+        border-bottom-right-radius: 5px
+

@@ -1,0 +1,19 @@
+@import '../../../variables'
+@import '../../../mixin'
+    
+.infoMessageContainer 
+    width: 100%
+    @include flexContainer(row, flex-start, center, nowrap)
+    padding: 15px 20px
+    background-color: $background-color-message
+    border-radius: 4px
+    margin-bottom: 37.5px
+
+    div
+        align-self: flex-start
+
+    .icon
+        margin-top: 1px
+        margin-right: 15px
+    .text
+        text-align: left

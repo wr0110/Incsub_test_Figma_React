@@ -1,0 +1,108 @@
+@import '../../variables'
+@import '../../mixin'
+
+.logo
+  position: absolute
+  top: 0
+  left: 0
+  margin: 30px 5%
+  color: $grey-color
+
+.homeContainer
+  position: relative
+  width: 67%
+  @include flexContainer(row, center, center, wrap)
+  border: 1px solid $grey-color
+  border-radius: 11px
+  box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.05)
+
+  .homeContainer_wrapper
+    width: 90%
+    height: 90%
+    padding: 10%
+    @include flexContainer(row, space-between, center, wrap)
+
+    .iconCross
+      position: absolute
+      top: 3%
+      right: 3%
+      z-index: 100
+      font-weight: 400
+      font-size: 16px
+      line-height: 16px
+      cursor: pointer
+
+    .icon
+      width: 10%
+      align-self: flex-start
+      img
+        width: 100%
+
+    .homeContainer_text
+      width: 88%
+      align-self: flex-start
+      text-align: left
+      font-family: $main-font
+
+      .title 
+        font-size: 24px
+        font-weight: 700
+        line-height: 40px
+        letter-spacing: 0.26px
+
+      .description  
+        .subText
+          @include textStyle($main-font, 400, 15px, 30px, 0.26px)
+          margin-top: 10px
+
+        .colorGrey
+          color: $color-sub-text
+
+        .lineHeight
+          margin: 20px auto
+
+        .colorBlack
+          color: $main-font-color-dark
+          font-weight: 700
+
+
+        .marginBottom
+          margin-bottom: 30px
+          
+        .btns
+          @include flexContainer(row, flex-start, center, wrap)
+
+          a
+            text-decoration: none
+
+          .btn
+            width: 165px
+            height: 40px
+            @include flexContainer(row, center, center, nowrap)
+            font-family: $main-font
+            font-style: normal
+            font-weight: 700
+            font-size: 13px
+            line-height: 15px
+            display: flex
+            align-items: center
+            text-align: center
+            cursor: pointer
+
+          .btnStyles
+            color: $color-btn-text
+            background: $btn-background
+            border-radius: 4px
+
+          .btnColor
+            color: $btn-color-blue
+
+// @media screen and ( max-width: 440 )
+//   .homeContainer
+//     width: 99%
+//     .wrapper
+//       width: 100%
+
+  
+
+

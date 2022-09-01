@@ -1,0 +1,20 @@
+@import '../../../variables'
+@import '../../../mixin'
+
+.containerInputTextarea 
+    width: 100%
+    margin: 0 auto
+
+    textarea
+        width: 98%
+        margin: 0 auto
+        border: 1px solid $line-color
+        border-radius: 5px
+        padding: 10px
+        @include textStyle($main-font, 400, 15px, 30px, 0.26px)
+
+        
+    textarea::placeholder
+        @include textStyle($main-font, 400, 15px, 30px, 0.26px)
+        color: $color-sub-text
+

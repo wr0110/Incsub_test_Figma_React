@@ -1,0 +1,129 @@
+@import '../../variables'
+@import '../../mixin'
+
+.formContainer
+    width: 100%
+    background-color: $color-btn-text
+    border-radius: 10px
+    position: relative
+
+    .wrapper
+        width: 85%
+        @include flexContainer(column, center, center, nowrap)
+        margin: 0 auto
+
+        .title
+            @include textStyle($main-font, 700, 24px, 30px, 0.26px)
+            justify-content: center
+            color: $black-color
+            padding-top: 60px
+            padding-bottom: 5px
+
+        .subTitle
+            @include textStyle($main-font, 400, 15px, 30px, 0.26px)
+            justify-content: center
+            color: $color-sub-text
+            padding-bottom: 30px
+
+        .inputContainer
+            width: 100%
+            @include flexContainer(column, flex-start, center, nowrap)
+
+            .inputContainer_wrapper
+                width: 100%
+                display: flex
+                justify-content: space-between
+                flex-direction: column
+                .inputRadioBtn
+                    width: 100%
+                    align-self: baseline
+                    margin-bottom: 20px
+                    padding: 15px 15px 15px 20px
+                    border: 1px solid $line-color
+                    border-radius: 30px
+                    @include flexContainer(row, flex-start, center, nowrap)
+                    
+                    .stylesInput, .stylesLabel
+                        align-self: center
+
+                    .stylesInput
+                        margin-right: 10px
+                        width: 20px
+                        height: 20px
+                        position: relative
+
+                        &::after
+                            display: none
+                            content: ''
+                            position: absolute
+                            top: 0
+                            left: 0
+                            right: 0
+                            z-index: 100
+                            width: 20px
+                            height: 20px
+                            background-color: #286EF1
+                            border-radius: 50%
+
+
+                        &::before
+                            display: none
+                            content: ''
+                            position: absolute
+                            top: 6px
+                            left: 6px
+                            right: 0
+                            z-index: 101
+                            width: 8px
+                            height: 8px
+                            background-color: #FFFFFF
+                            border-radius: 50%
+
+                    .stylesInput:checked 
+                        &::after
+                            display: block
+                        &::before
+                            display: block
+
+                    .stylesLabel
+                        @include textStyle($main-font, 500, 15px, 18px, none)
+                        color: $black-color
+
+        .backgroundColor
+            background-color: $background-lightBlue
+
+        .btns
+            position: relative
+            width: 100%
+            margin-bottom: 37.5px
+            @include flexContainer(row, space-between, center, nowrap)
+
+            a
+                text-decoration: none
+                cursor: pointer
+
+            .btnIcon
+                padding: 8px 10px
+                border: 1px solid $line-color
+                border-radius: 5px
+                @include flexContainer(row, space-between, center, nowrap)
+
+                .btnIcon_icon, .btnIcon_text
+                    align-self: center
+
+                .btnIcon_icon
+                    padding-right: 5px
+                    @include flexContainer(row, space-between, center, nowrap)
+
+                .btnIcon_text 
+                    @include textStyle($main-font, 700, 13px, 12px, 0.26px)
+
+            .btn
+                padding: 8px 10px
+                border-radius: 5px
+                @include textStyle($main-font, 700, 13px, 12px, 0.26px)
+                color: $color-btn-text
+                background-color: $background-color-btnRed
+                cursor: pointer
+
+

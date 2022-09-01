@@ -1,0 +1,17 @@
+@mixin flexContainer($flexDirection, $justifyContent, $alignItems, $wrap)
+    display: flex
+    flex-direction: $flexDirection
+    justify-content: $justifyContent
+    align-items: $alignItems
+    flex-wrap: $wrap
+
+@mixin textStyle($fontFamily, $fontWeight, $fontSize, $lineHeight, $letterSpacing)
+    font-family: $fontFamily
+    font-style: normal
+    font-weight: $fontWeight
+    font-size: $fontSize
+    line-height: $lineHeight
+    display: flex
+    align-items: center
+    letter-spacing: $letterSpacing
+
